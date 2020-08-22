@@ -37,4 +37,25 @@ Looks like a bunch of string compares and then it opens the 7z archive
 that the file came in?
 
 
+Looks like the first one is "./CNM".
+rdx and rax are 2 registers being strcmp'd.
+```
+:> x 8 @ rdx
+- offset -       0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x7ffd69ba11aa  2e2f 434e 4d00 4c45                      ./CNM.LE
+:> x 8 @ rax
+- offset -       0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0x7ffd69b9f8c0  6e69 636b 0000 0000                      nick....
+```
+
+Next one is a number: 1
+Next one is a number: 7
+Next one is a number: 8
+Next one is a number: 5
+
+
+Got it to say "good key!" and it excreted a `CNP.7z` 
+(the `CNM` executable came from `CNM.7z`).
+
+
 
