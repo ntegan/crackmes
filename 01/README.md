@@ -59,3 +59,15 @@ Got it to say "good key!" and it excreted a `CNP.7z`
 
 
 
+
+Solution, I guess
+=================
+```
+ntegan@otp9010 ~/cmes/gitrepo/01 (git)-[master] % ./CNM
+Enter key: ./CNM
+1
+7
+8
+5
+Good key!
+```
